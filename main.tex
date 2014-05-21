@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[hscale=0.8,vscale=0.85]{geometry}
+\usepackage{pgf,pgffor}
+\usepackage{graphicx}
+\usepackage[labelformat=empty]{caption}
+\usepackage{float}
+\usepackage{wrapfig}
+\begin{document}
+  \begin{figure}\centering
+    \foreach \x in \myvar {
+      \minipage{0.32\textwidth}\centering
+        \includegraphics{\x.png}
+        \caption{\x}
+      \endminipage
+    }
+  \end{figure}
+\end{document}
+
